@@ -1,0 +1,29 @@
+{
+	"name": "poppy/area",
+	"description": "An Area management.",
+	"license": "Apache-2.0",
+	"authors": [
+		{
+			"name": "Mark Zhao",
+			"email": "zhaody901@126.com"
+		}
+	],
+	"require": {
+		"php": "^8.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Poppy\\Area\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Poppy\\Area\\Tests\\" : "tests/"
+		}
+	},
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true
+	},
+	"minimum-stability": "dev"
+}
