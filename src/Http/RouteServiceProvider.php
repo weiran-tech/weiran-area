@@ -6,7 +6,7 @@ namespace Weiran\Area\Http;
 
 use Route;
 
-class RouteServiceProvider extends \Poppy\Framework\Application\RouteServiceProvider
+class RouteServiceProvider extends \Weiran\Framework\Application\RouteServiceProvider
 {
     /**
      * The controller namespace for the application.
