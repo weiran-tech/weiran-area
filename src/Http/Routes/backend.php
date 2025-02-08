@@ -5,7 +5,7 @@ declare(strict_types = 1);
 use Illuminate\Routing\Router;
 
 Route::group([
-    'namespace' => 'Poppy\Area\Http\Request\Backend',
+    'namespace' => 'Weiran\Area\Http\Request\Backend',
 ], function (Router $router) {
     $router->any('/', 'ContentController@index')
         ->name('py-area:backend.content.index');
