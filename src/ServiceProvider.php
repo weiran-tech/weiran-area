@@ -8,11 +8,11 @@ use Weiran\Area\Commands\InitCommand;
 use Weiran\Area\Http\RouteServiceProvider;
 use Weiran\Framework\Events\PoppyOptimized;
 use Weiran\Framework\Exceptions\ModuleNotFoundException;
-use Weiran\Framework\Support\PoppyServiceProvider;
+use Weiran\Framework\Support\WeiranServiceProvider;
 use Weiran\MgrPage\Classes\Form;
 use Weiran\MgrPage\Classes\Grid\Filter;
 
-class ServiceProvider extends PoppyServiceProvider
+class ServiceProvider extends WeiranServiceProvider
 {
     protected array $listens = [
         PoppyOptimized::class => [
