@@ -85,7 +85,7 @@ class Area
         $this->matchKv(true);
         if ($id) {
             if ($id === $initDb['parent_id']) {
-                return $this->setError(trans('py-system::action.area.same_error'));
+                return $this->setError(trans('weiran-system::action.area.same_error'));
             }
             $needUpdate = array_merge(
                 $needUpdate,
@@ -131,7 +131,7 @@ class Area
             return false;
         }
         if (SysArea::where('parent_id', $id)->exists()) {
-            return $this->setError(trans('py-system::action.area.exist_error'));
+            return $this->setError(trans('weiran-system::action.area.exist_error'));
         }
         $parentIds = $this->parentIds($id, 'array');
         $this->area->delete();
