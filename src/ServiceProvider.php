@@ -27,7 +27,7 @@ class ServiceProvider extends WeiranServiceProvider
      */
     public function boot()
     {
-        parent::boot('poppy.area');
+        parent::boot('weiran.area');
     }
 
     /**

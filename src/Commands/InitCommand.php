@@ -30,7 +30,7 @@ class InitCommand extends Command
     public function initProvince(): void
     {
         $this->info('Init Province Data ....');
-        $path      = poppy_path('poppy.area', 'resources/def/province.json');
+        $path      = poppy_path('weiran.area', 'resources/def/province.json');
         $content   = app('files')->get($path);
         $provinces = json_decode($content, true);
 
@@ -52,7 +52,7 @@ class InitCommand extends Command
     public function initCity()
     {
         $this->info('Init City Data ....');
-        $path      = poppy_path('poppy.area', 'resources/def/city.json');
+        $path      = poppy_path('weiran.area', 'resources/def/city.json');
         $content   = app('files')->get($path);
         $provinces = json_decode($content, true);
         foreach ($provinces as $province_code => $city) {
@@ -85,7 +85,7 @@ class InitCommand extends Command
     public function initCounty()
     {
         $this->info('Init County Data ....');
-        $path    = poppy_path('poppy.area', 'resources/def/county.json');
+        $path    = poppy_path('weiran.area', 'resources/def/county.json');
         $content = app('files')->get($path);
         $cities  = json_decode($content, true);
         foreach ($cities as $city_code => $counties) {
