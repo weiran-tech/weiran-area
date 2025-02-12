@@ -27,7 +27,7 @@ class ContentController extends BackendController
     {
         parent::__construct();
         self::$permission = [
-            'global' => 'backend:py-area.main.manage',
+            'global' => 'backend:weiran-area.main.manage',
         ];
     }
 

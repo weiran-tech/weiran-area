@@ -17,7 +17,7 @@ class ClearCacheListener
      */
     public function handle(PoppyOptimized $event)
     {
-        sys_tag('py-area')->clear();
+        sys_tag('weiran-area')->clear();
     }
 }
 

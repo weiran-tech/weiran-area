@@ -113,7 +113,7 @@ class Area
 
         $this->initArea($this->area->id);
         if ($this->area->level < 4) {
-            sys_tag('py-area')->del(PyAreaDef::ckArea('tree-level-2'));
+            sys_tag('weiran-area')->del(PyAreaDef::ckArea('tree-level-2'));
         }
 
         return true;
@@ -320,10 +320,10 @@ class Area
     private function matchKv($clear = false)
     {
         if ($clear) {
-            sys_tag('py-area')->del(PyAreaDef::ckMatchIdPid());
+            sys_tag('weiran-area')->del(PyAreaDef::ckMatchIdPid());
         }
 
-        return sys_tag('py-area')->remember(PyAreaDef::ckMatchIdPid(), 10, function () {
+        return sys_tag('weiran-area')->remember(PyAreaDef::ckMatchIdPid(), 10, function () {
             return SysArea::pluck('parent_id', 'id')->toArray();
         });
     }

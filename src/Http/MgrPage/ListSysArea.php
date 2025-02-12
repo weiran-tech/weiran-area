@@ -28,8 +28,8 @@ class ListSysArea extends ListBase
         $this->addColumn(Column::NAME_ACTION, '操作')->displayUsing(Actions::class, [function (Actions $actions) {
             /** @var SysArea $item */
             $item = $actions->row;
-            $actions->edit(route('py-area:backend.content.establish', [$item->id]));
-            $actions->delete(route('py-area:backend.content.delete', [$item->id]), $item->title);
+            $actions->edit(route('weiran-area:backend.content.establish', [$item->id]));
+            $actions->delete(route('weiran-area:backend.content.delete', [$item->id]), $item->title);
         },])->width(140)->fixed();
     }
 
@@ -49,8 +49,8 @@ class ListSysArea extends ListBase
     public function quickButtons(): Closure
     {
         return function (Operations $operations) {
-            $operations->create(route_url('py-area:backend.content.establish'));
-            $operations->progress(route_url('py-area:backend.content.fix'));
+            $operations->create(route_url('weiran-area:backend.content.establish'));
+            $operations->progress(route_url('weiran-area:backend.content.fix'));
         };
     }
 }

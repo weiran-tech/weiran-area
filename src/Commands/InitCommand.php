@@ -10,7 +10,7 @@ use Weiran\Core\Redis\RdsDb;
 
 class InitCommand extends Command
 {
-    protected $name = 'py-area:init';
+    protected $name = 'weiran-area:init';
 
     private RdsDb $rds;
 
@@ -115,11 +115,11 @@ class InitCommand extends Command
 
     private function ckProvince(): string
     {
-        return 'py-area:import-province';
+        return 'weiran-area:import-province';
     }
 
     private function ckCity(): string
     {
-        return 'py-area:import-city';
+        return 'weiran-area:import-city';
     }
 }

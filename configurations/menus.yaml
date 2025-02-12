@@ -8,5 +8,5 @@ backend:
       children:
         -
           title: 地区管理
-          route: py-area:backend.content.index
-          permission: 'backend:py-area.main.manage'
+          route: weiran-area:backend.content.index
+          permission: 'backend:weiran-area.main.manage'

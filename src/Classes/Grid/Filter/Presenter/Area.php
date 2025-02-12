@@ -11,7 +11,7 @@ class Area extends Presenter
 {
     public function view(): string
     {
-        return 'py-area::tpl.filter.area';
+        return 'weiran-area::tpl.filter.area';
     }
 
     public function variables(): array
