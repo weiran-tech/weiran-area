@@ -217,7 +217,7 @@ class SysArea extends Model
     public static function country()
     {
         return sys_tag('weiran-area')->remember(PyAreaDef::ckCountry(), PyCoreDef::MIN_ONE_MONTH * 60, function () {
-            $values = include poppy_path('weiran.area', 'resources/def/country.php');
+            $values = include weiran_path('weiran.area', 'resources/def/country.php');
             return collect($values)->sortBy('py')->map(function ($cty) {
                 $cty['py'] = strtoupper($cty['py']);
                 return $cty;
