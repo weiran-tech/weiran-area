@@ -9,7 +9,7 @@
 
     <div class="{{$viewClass['field']}}">
         <div class="layui-form-auto-field">
-            {!! app('poppy.mgr-page.form')->select($name, $area, $value, [
+            {!! app('weiran.mgr-page.form')->select($name, $area, $value, [
                 'placeholder' => '请选择地区'
             ]) !!}
         </div>
