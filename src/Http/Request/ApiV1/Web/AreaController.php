@@ -7,7 +7,7 @@ namespace Weiran\Area\Http\Request\ApiV1\Web;
 use Weiran\Area\Models\SysArea;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Helper\UtilHelper;
-use Weiran\System\Http\Request\ApiV1\WebApiController;
+use Weiran\System\Http\Request\Web\ApiV1\WebApiController;
 
 /**
  * 地区管理控制器
