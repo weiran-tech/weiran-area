@@ -4,7 +4,7 @@ backend:
     -
       title: 地区管理
       icon: 'bi bi-geo'
-      injection: 'poppy.mgr-page/backend||setting'
+      injection: 'weiran.mgr-page/backend||setting'
       children:
         -
           title: 地区管理

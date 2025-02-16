@@ -10,7 +10,7 @@ use Weiran\Core\Redis\RdsDb;
 
 class InitCommand extends Command
 {
-    protected $name = 'weiran-area:init';
+    protected $name = 'weiran:area:init';
 
     private RdsDb $rds;
 
