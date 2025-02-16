@@ -13,7 +13,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
      * When present, controller route declarations will automatically be prefixed with this namespace.
      * @var string|null
      */
-    protected $namespace = 'Poppy\Area\Http\Request';
+    protected $namespace = 'Weiran\Area\Http\Request';
 
     /**
      * Define your route model bindings, pattern filters, etc.
