@@ -49,11 +49,11 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
      * These routes are typically stateless.
      * @return void
      */
-    protected function mapApiRoutes()
+    protected function mapApiRoutes(): void
     {
         Route::group([
             'middleware' => 'api-sign',
-            'prefix'     => 'api_v1/area',
+            'prefix'     => 'api/web/v1/area',
         ], function () {
             require_once __DIR__ . '/Routes/api_v1.php';
         });
