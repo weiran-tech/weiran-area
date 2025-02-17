@@ -19,7 +19,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
      * Define your route model bindings, pattern filters, etc.
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->routes(function () {
             $this->mapWebRoutes();
@@ -33,7 +33,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
      * These routes all receive session state, CSRF protection, etc.
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapWebRoutes(): void
     {
         // backend web
         Route::group([
