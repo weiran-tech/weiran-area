@@ -2,26 +2,26 @@
 
 namespace Weiran\Area\Http\Request\Web\OA;
 
-use OpenApi\Attributes as OAT;
+use OpenApi\Attributes as OA;
 
-#[OAT\Schema(
+#[OA\Schema(
     description: '地区码',
 )]
 class AreaAreaCodeItem
 {
-    #[OAT\Property(
+    #[OA\Property(
         description: '地区信息',
         properties: [
-            new OAT\Property(property: 'id', description: 'ID', type: 'integer'),
-            new OAT\Property(property: 'title', description: '用户名', type: 'string'),
-            new OAT\Property(property: 'children', description: '子级别', type: 'array', items: new OAT\Items(
+            new OA\Property(property: 'id', description: 'ID', type: 'integer'),
+            new OA\Property(property: 'title', description: '用户名', type: 'string'),
+            new OA\Property(property: 'children', description: '子级别', type: 'array', items: new OA\Items(
                 properties: [
-                    new OAT\Property(property: 'id', description: 'ID', type: 'integer'),
-                    new OAT\Property(property: 'title', description: '用户名', type: 'string'),
-                    new OAT\Property(property: 'children', description: '子级别', type: 'array', items: new OAT\Items(
+                    new OA\Property(property: 'id', description: 'ID', type: 'integer'),
+                    new OA\Property(property: 'title', description: '用户名', type: 'string'),
+                    new OA\Property(property: 'children', description: '子级别', type: 'array', items: new OA\Items(
                         properties: [
-                            new OAT\Property(property: 'id', description: 'ID', type: 'integer'),
-                            new OAT\Property(property: 'title', description: '用户名', type: 'string'),
+                            new OA\Property(property: 'id', description: 'ID', type: 'integer'),
+                            new OA\Property(property: 'title', description: '用户名', type: 'string'),
                         ]
                     ))
                 ]
