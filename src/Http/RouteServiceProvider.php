@@ -53,7 +53,7 @@ class RouteServiceProvider extends \Weiran\Framework\Application\RouteServicePro
     {
         Route::group([
             'middleware' => 'api-sign',
-            'prefix'     => 'api/web/v1/area',
+            'prefix'     => 'api/web/area/v1',
         ], function () {
             require_once __DIR__ . '/Routes/api_v1.php';
         });

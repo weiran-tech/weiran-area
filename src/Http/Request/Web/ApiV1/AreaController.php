@@ -20,7 +20,7 @@ class AreaController extends WebApiController
 {
 
     #[OA\Get(
-        path: 'api/web/v1/area/area/code',
+        path: 'api/web/area/v1/area/code',
         summary: '地区代码',
         tags: ['Area'],
         responses: [
@@ -40,7 +40,7 @@ class AreaController extends WebApiController
 
 
     #[OA\Get(
-        path: 'api/web/v1/area/area/country',
+        path: 'api/web/area/v1/area/country',
         summary: '国别',
         tags: ['Area'],
         responses: [
