@@ -1,12 +1,13 @@
-backend:
-  title: 地区管理
-  groups:
+-
+  title : 地区管理
+  type : backend
+  groups :
     -
-      title: 地区管理
-      icon: 'bi bi-geo'
-      injection: 'weiran.mgr-page/backend||setting'
-      children:
+      title : 地区管理
+      icon : 'bi bi-geo'
+      injection : 'weiran.mgr-page/backend||setting'
+      children :
         -
-          title: 地区管理
-          route: weiran-area:backend.content.index
-          permission: 'backend:weiran-area.main.manage'
+          title : 地区管理
+          route : weiran-area:backend.content.index
+          permission : 'backend:weiran-area.main.manage'
