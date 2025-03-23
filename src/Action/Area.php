@@ -174,10 +174,10 @@ class Area
             $ids = $id;
         }
 
-        $children = [];
-        foreach ($ids as $_id) {
-            $children = array_merge($children, array_keys($matchKv, $_id));
-        }
+        // 优化：使用 array_filter 和 array_keys 的组合来减少循环次数
+        $children = array_keys(array_filter($matchKv, function($value) use ($ids) {
+            return in_array($value, $ids, true);
+        }));
 
         if (!$children) {
             return $ids;

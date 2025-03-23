@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-class CreateSysAreaTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -28,7 +27,6 @@ class CreateSysAreaTable extends Migration
             $table->charset   = 'utf8';
             $table->collation = 'utf8_general_ci';
         });
-
     }
 
     /**
@@ -40,4 +38,4 @@ class CreateSysAreaTable extends Migration
     {
         Schema::dropIfExists('sys_area');
     }
-}
+};
