@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Weiran\Area\Classes;
 
-class PyAreaDef
+class WeiranAreaDef
 {
     /**
      * ID -> PID 映射
