@@ -25,5 +25,12 @@
 		"preferred-install": "dist",
 		"sort-packages": true
 	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Weiran\\Area\\ServiceProvider"
+			]
+		}
+	},
 	"minimum-stability": "dev"
 }
