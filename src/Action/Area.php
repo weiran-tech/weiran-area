@@ -5,14 +5,14 @@ declare(strict_types = 1);
 namespace Weiran\Area\Action;
 
 use Exception;
+use Validator;
+use View;
 use Weiran\Area\Classes\WeiranAreaDef;
 use Weiran\Area\Models\SysArea;
 use Weiran\Framework\Classes\Traits\AppTrait;
 use Weiran\Framework\Validation\Rule;
 use Weiran\System\Classes\Traits\FixTrait;
 use Weiran\System\Classes\Traits\PamTrait;
-use Validator;
-use View;
 
 /**
  * 地区
@@ -47,7 +47,7 @@ class Area
      *                       string  title       标题
      *                       int     parent_id   父id
      *                       int     top_id      顶级id
-     * @param null|int $id   地区id
+     * @param null|int $id 地区id
      * @return bool
      */
     public function establish(array $data, $id = null): bool
@@ -142,7 +142,7 @@ class Area
 
     /**
      * 获取父元素IDs
-     * @param int    $id   地区id
+     * @param int    $id 地区id
      * @param string $type 类型
      * @return string|array
      */
@@ -175,7 +175,7 @@ class Area
         }
 
         // 优化：使用 array_filter 和 array_keys 的组合来减少循环次数
-        $children = array_keys(array_filter($matchKv, function($value) use ($ids) {
+        $children = array_keys(array_filter($matchKv, function ($value) use ($ids) {
             return in_array($value, $ids, true);
         }));
 
@@ -348,7 +348,7 @@ class Area
     private function topParentId(int $id)
     {
         $parentIds = $this->parentIds($id, 'array');
-        if (count($parentIds) == 1) {
+        if (count($parentIds) === 1) {
             return $id;
         }
 
