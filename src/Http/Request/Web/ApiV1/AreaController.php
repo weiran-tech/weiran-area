@@ -8,6 +8,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use OpenApi\Attributes as OA;
+use Weiran\Area\Http\Request\Web\OpenApi\AreaAreaCodeBody;
+use Weiran\Area\Http\Request\Web\OpenApi\AreaAreaCountryBody;
 use Weiran\Area\Models\SysArea;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Helper\UtilHelper;
@@ -27,7 +29,7 @@ class AreaController extends WebApiController
             new OA\Response(
                 response: 200,
                 description: '获取成功',
-                content: new OA\JsonContent(ref: '#/components/schemas/AreaAreaCodeBody',)
+                content: new OA\JsonContent(ref: AreaAreaCodeBody::class)
             )
         ]
     )]
@@ -47,7 +49,7 @@ class AreaController extends WebApiController
             new OA\Response(
                 response: 200,
                 description: '获取成功',
-                content: new OA\JsonContent(ref: '#/components/schemas/AreaAreaCountryBody')
+                content: new OA\JsonContent(ref: AreaAreaCountryBody::class)
             )
         ]
     )]

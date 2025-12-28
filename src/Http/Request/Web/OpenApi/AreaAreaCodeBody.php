@@ -12,7 +12,7 @@ class AreaAreaCodeBody extends ResponseBaseBody
 {
     #[OA\Property(
         type: 'array',
-        items: new OA\Items(ref: '#/components/schemas/AreaAreaCountryItem')
+        items: new OA\Items(ref: AreaAreaCountryItem::class)
     )]
     public array $data;
 }
