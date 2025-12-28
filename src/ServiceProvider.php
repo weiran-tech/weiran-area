@@ -22,7 +22,9 @@ class ServiceProvider extends WeiranServiceProvider
 
     /**
      * Bootstrap the module services.
+     *
      * @return void
+     *
      * @throws ModuleNotFoundException
      */
     public function boot()
@@ -32,6 +34,7 @@ class ServiceProvider extends WeiranServiceProvider
 
     /**
      * Register the module services.
+     *
      * @return void
      */
     public function register()

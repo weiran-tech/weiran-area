@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Weiran\Area\Http\Request\Web\OpenApi;
 
 use OpenApi\Attributes as OA;

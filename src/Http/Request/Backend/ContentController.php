@@ -7,6 +7,7 @@ namespace Weiran\Area\Http\Request\Backend;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Throwable;
 use Weiran\Area\Action\Area;
 use Weiran\Area\Http\MgrPage\FormAreaEstablish;
 use Weiran\Area\Http\MgrPage\ListSysArea;
@@ -15,14 +16,12 @@ use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Exceptions\ApplicationException;
 use Weiran\MgrPage\Classes\Grid;
 use Weiran\MgrPage\Http\Request\Backend\BackendController;
-use Throwable;
 
 /**
  * 地区管理控制器
  */
 class ContentController extends BackendController
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -33,7 +32,9 @@ class ContentController extends BackendController
 
     /**
      * 地区列表
+     *
      * @return \Illuminate\Http\Response|JsonResponse|RedirectResponse|string
+     *
      * @throws ApplicationException
      * @throws Throwable
      */
@@ -41,11 +42,13 @@ class ContentController extends BackendController
     {
         $grid = new Grid(new SysArea());
         $grid->setLists(ListSysArea::class);
+
         return $grid->render();
     }
 
     /**
      * 地区添加/编辑
+     *
      * @param null|int $id 地区id
      */
     public function establish($id = null)
@@ -53,12 +56,15 @@ class ContentController extends BackendController
         $form = new FormAreaEstablish();
         $form->setPam($this->pam);
         $form->setId($id);
+
         return $form->render();
     }
 
     /**
      * 删除地区
+     *
      * @param int $id 地区id
+     *
      * @throws Exception
      */
     public function delete($id)
@@ -81,7 +87,6 @@ class ContentController extends BackendController
 
     /**
      * 版本Action
-     * @return Area
      */
     private function action(): Area
     {

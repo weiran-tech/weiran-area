@@ -15,7 +15,6 @@ use Weiran\MgrPage\Classes\Operations;
 
 class ListSysArea extends ListBase
 {
-
     public string $title = '地区管理';
 
     /**
@@ -30,9 +29,8 @@ class ListSysArea extends ListBase
             $item = $actions->row;
             $actions->edit(route('weiran-area:backend.content.establish', [$item->id]));
             $actions->delete(route('weiran-area:backend.content.delete', [$item->id]), $item->title);
-        },])->width(140)->fixed();
+        }, ])->width(140)->fixed();
     }
-
 
     public function filter(): Closure
     {

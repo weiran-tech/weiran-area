@@ -15,7 +15,7 @@ use Weiran\System\Classes\Traits\PamTrait;
 
 class FormAreaEstablish extends FormWidget
 {
-    use PamTrait, AppTrait;
+    use AppTrait, PamTrait;
 
     public bool $ajax = true;
 
@@ -28,7 +28,7 @@ class FormAreaEstablish extends FormWidget
 
     /**
      * 设置id
-     * @param $id
+     *
      * @return $this
      */
     public function setId($id): self
@@ -41,9 +41,9 @@ class FormAreaEstablish extends FormWidget
                 throw new ApplicationException('无地区信息');
             }
         }
+
         return $this;
     }
-
 
     public function handle()
     {
@@ -69,6 +69,7 @@ class FormAreaEstablish extends FormWidget
                 'title' => $this->item->title,
             ];
         }
+
         return [];
     }
 

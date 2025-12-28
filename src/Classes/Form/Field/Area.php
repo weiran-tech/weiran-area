@@ -10,7 +10,7 @@ use Weiran\MgrPage\Classes\Form\Field;
 final class Area extends Field
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected string $view = 'weiran-area::tpl.form.area';
 
@@ -19,6 +19,7 @@ final class Area extends Field
         $this->addVariables([
             'area' => SysArea::cityTree(),
         ]);
+
         return parent::render();
     }
 }

@@ -20,7 +20,6 @@ use Weiran\System\Http\Request\Web\ApiV1\WebApiController;
  */
 class AreaController extends WebApiController
 {
-
     #[OA\Get(
         path: 'api/web/area/v1/area/code',
         summary: '地区代码',
@@ -30,16 +29,16 @@ class AreaController extends WebApiController
                 response: 200,
                 description: '获取成功',
                 content: new OA\JsonContent(ref: AreaAreaCodeBody::class)
-            )
+            ),
         ]
     )]
     public function code(): Response|JsonResponse|RedirectResponse
     {
         $items = SysArea::selectRaw('id,title,left(code, 6) as code,parent_id')->get()->toArray();
         $array = UtilHelper::genTree($items, 'id', 'parent_id', 'children', false);
+
         return Resp::success('获取数据成功', $array);
     }
-
 
     #[OA\Get(
         path: 'api/web/area/v1/area/country',
@@ -50,7 +49,7 @@ class AreaController extends WebApiController
                 response: 200,
                 description: '获取成功',
                 content: new OA\JsonContent(ref: AreaAreaCountryBody::class)
-            )
+            ),
         ]
     )]
     public function country(): Response|JsonResponse|RedirectResponse

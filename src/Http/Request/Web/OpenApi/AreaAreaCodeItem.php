@@ -23,7 +23,7 @@ class AreaAreaCodeItem
                             new OA\Property(property: 'id', description: 'ID', type: 'integer'),
                             new OA\Property(property: 'title', description: '用户名', type: 'string'),
                         ]
-                    ))
+                    )),
                 ]
             )),
         ],

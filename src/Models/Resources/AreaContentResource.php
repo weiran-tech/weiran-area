@@ -9,12 +9,13 @@ use Weiran\Area\Models\SysArea;
 
 /**
  * 地区resource
+ *
  * @mixin SysArea
  */
 class AreaContentResource extends JsonResource
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toArray($request)
     {
