@@ -2,18 +2,18 @@
 
 declare(strict_types = 1);
 
-namespace Weiran\Area\Http\Request\Web\ApiV1;
+namespace Weiran\Area\Http\Web\ApiV1;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use OpenApi\Attributes as OA;
-use Weiran\Area\Http\Request\Web\OpenApi\AreaAreaCodeBody;
-use Weiran\Area\Http\Request\Web\OpenApi\AreaAreaCountryBody;
+use Weiran\Area\Http\Web\ApiV1\Area\AreaCodeResponseBody;
+use Weiran\Area\Http\Web\ApiV1\Area\AreaCountryResponseBody;
 use Weiran\Area\Models\SysArea;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Helper\UtilHelper;
-use Weiran\System\Http\Request\Web\ApiV1\WebApiController;
+use Weiran\System\Http\Web\ApiV1\WebApiController;
 
 /**
  * Area
@@ -28,7 +28,7 @@ class AreaController extends WebApiController
             new OA\Response(
                 response: 200,
                 description: '获取成功',
-                content: new OA\JsonContent(ref: AreaAreaCodeBody::class)
+                content: new OA\JsonContent(ref: AreaCodeResponseBody::class)
             ),
         ]
     )]
@@ -48,7 +48,7 @@ class AreaController extends WebApiController
             new OA\Response(
                 response: 200,
                 description: '获取成功',
-                content: new OA\JsonContent(ref: AreaAreaCountryBody::class)
+                content: new OA\JsonContent(ref: AreaCountryResponseBody::class)
             ),
         ]
     )]

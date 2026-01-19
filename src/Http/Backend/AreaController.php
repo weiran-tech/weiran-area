@@ -2,25 +2,25 @@
 
 declare(strict_types = 1);
 
-namespace Weiran\Area\Http\Request\Backend;
+namespace Weiran\Area\Http\Backend;
 
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Throwable;
 use Weiran\Area\Action\Area;
-use Weiran\Area\Http\MgrPage\FormAreaEstablish;
-use Weiran\Area\Http\MgrPage\ListSysArea;
+use Weiran\Area\Http\Backend\Area\AreaEstablishForm;
+use Weiran\Area\Http\Backend\Area\AreaList;
 use Weiran\Area\Models\SysArea;
 use Weiran\Framework\Classes\Resp;
 use Weiran\Framework\Exceptions\ApplicationException;
 use Weiran\MgrPage\Classes\Grid;
-use Weiran\MgrPage\Http\Request\Backend\BackendController;
+use Weiran\MgrPage\Http\Backend\BackendController;
 
 /**
  * 地区管理控制器
  */
-class ContentController extends BackendController
+class AreaController extends BackendController
 {
     public function __construct()
     {
@@ -41,7 +41,7 @@ class ContentController extends BackendController
     public function index()
     {
         $grid = new Grid(new SysArea());
-        $grid->setLists(ListSysArea::class);
+        $grid->setLists(AreaList::class);
 
         return $grid->render();
     }
@@ -53,7 +53,7 @@ class ContentController extends BackendController
      */
     public function establish($id = null)
     {
-        $form = new FormAreaEstablish();
+        $form = new AreaEstablishForm();
         $form->setPam($this->pam);
         $form->setId($id);
 

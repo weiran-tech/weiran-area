@@ -209,17 +209,17 @@ class Area
         if (!$this->fix['cached']) {
             $this->fix['cached'] = 1;
         }
-        $Db = new SysArea();
-        $this->total($Db->count());
-        $this->max($Db->max('id'));
-        $this->min($Db->min('id'));
+        $db = new SysArea();
+        $this->total($db->count());
+        $this->max($db->max('id'));
+        $this->min($db->min('id'));
         $this->section(100);
 
         // ↑↑↑↑↑↑↑↑↑↑↑   获取参数
 
         // 剩余数
         $this->left(
-            $Db->whereRaw('id > ?', [$this->fix['start']])->count('id')
+            $db->whereRaw('id > ?', [$this->fix['start']])->count('id')
         );
 
         $this->fix['lastId'] = $this->fix['start'];

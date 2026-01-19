@@ -1,6 +1,6 @@
 <?php
 
-namespace Weiran\Area\Http\Request\Web\OpenApi;
+namespace Weiran\Area\Http\Web\ApiV1\Area;
 
 use OpenApi\Attributes as OA;
 
@@ -15,4 +15,4 @@ use OpenApi\Attributes as OA;
     ],
     type: 'object'
 )]
-class AreaAreaCountryItem {}
+class AreaCountryItem {}

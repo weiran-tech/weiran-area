@@ -1,13 +1,13 @@
 <?php
 
-namespace Weiran\Area\Http\Request\Web\OpenApi;
+namespace Weiran\Area\Http\Web\ApiV1\Area;
 
 use OpenApi\Attributes as OA;
 
 #[OA\Schema(
     description: '地区码',
 )]
-class AreaAreaCodeItem
+class AreaCodeItem
 {
     #[OA\Property(
         description: '地区信息',

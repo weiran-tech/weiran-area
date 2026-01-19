@@ -6,7 +6,7 @@ namespace Weiran\Area;
 
 use Weiran\Area\Commands\InitCommand;
 use Weiran\Area\Http\RouteServiceProvider;
-use Weiran\Framework\Events\WeiranOptimized;
+use Weiran\Framework\Events\WeiranOptimizedEvent;
 use Weiran\Framework\Exceptions\ModuleNotFoundException;
 use Weiran\Framework\Support\WeiranServiceProvider;
 use Weiran\MgrPage\Classes\Form;
@@ -15,7 +15,7 @@ use Weiran\MgrPage\Classes\Grid\Filter;
 class ServiceProvider extends WeiranServiceProvider
 {
     protected array $listens = [
-        WeiranOptimized::class => [
+        WeiranOptimizedEvent::class => [
             Listeners\WeiranOptimized\ClearCacheListener::class,
         ],
     ];

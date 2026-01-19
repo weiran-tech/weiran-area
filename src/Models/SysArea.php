@@ -42,6 +42,7 @@ use Weiran\System\Classes\Traits\FilterTrait;
 class SysArea extends Model
 {
     use FilterTrait, LegacySerializeData;
+
     public const LEVEL_PROVINCE = 1;
     public const LEVEL_CITY     = 2;
     public const LEVEL_COUNTY   = 4;
@@ -64,10 +65,10 @@ class SysArea extends Model
     {
         return sys_tag('weiran-area')->remember(WeiranAreaDef::ckArea('tree-level-2'), WeiranCoreDef::MIN_ONE_MONTH * 60, function () {
             $items = SysArea::selectRaw('id,title,parent_id')->where('level', '<', 4)->get()->keyBy('id')->toArray();
-            $Tree  = new TreeHelper();
-            $Tree->init($items, 'id', 'parent_id', 'title');
+            $tree  = new TreeHelper();
+            $tree->init($items, 'id', 'parent_id', 'title');
 
-            return $Tree->getTreeArray(0);
+            return $tree->getTreeArray(0);
         });
     }
 
@@ -75,11 +76,11 @@ class SysArea extends Model
     {
         return sys_tag('weiran-area')->remember(WeiranAreaDef::ckArea('tree-level-2-mgr'), WeiranCoreDef::MIN_ONE_MONTH * 60, function () {
             $items       = SysArea::selectRaw('id,title,parent_id')->where('level', '<', 4)->get()->keyBy('id')->toArray();
-            $Tree        = new TreeHelper();
-            $Tree->space = ' ';
-            $Tree->icon  = [' │', ' ├', ' └'];
-            $Tree->init($items, 'id', 'parent_id', 'title');
-            $treeArr = $Tree->getTreeArray(0);
+            $tree        = new TreeHelper();
+            $tree->space = ' ';
+            $tree->icon  = [' │', ' ├', ' └'];
+            $tree->init($items, 'id', 'parent_id', 'title');
+            $treeArr = $tree->getTreeArray(0);
             $options = [];
             foreach ($treeArr as $key => $value) {
                 $options[] = [

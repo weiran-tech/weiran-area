@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Weiran\Area\Http\MgrPage;
+namespace Weiran\Area\Http\Backend\Area;
 
 use Weiran\Area\Action\Area;
 use Weiran\Area\Models\SysArea;
@@ -13,7 +13,7 @@ use Weiran\Framework\Validation\Rule;
 use Weiran\MgrPage\Classes\Widgets\FormWidget;
 use Weiran\System\Classes\Traits\PamTrait;
 
-class FormAreaEstablish extends FormWidget
+class AreaEstablishForm extends FormWidget
 {
     use AppTrait, PamTrait;
 
@@ -48,16 +48,16 @@ class FormAreaEstablish extends FormWidget
     public function handle()
     {
         $id   = (int) input('id');
-        $Area = (new Area())->setPam($this->pam);
+        $area = (new Area())->setPam($this->pam);
         if (is_post()) {
-            if ($Area->establish(input(), $id)) {
+            if ($area->establish(input(), $id)) {
                 return Resp::success('添加版本成功', '_top_reload|1');
             }
 
-            return Resp::error($Area->getError());
+            return Resp::error($area->getError());
         }
 
-        $id && $Area->initArea($id) && $Area->share();
+        $id && $area->initArea($id) && $area->share();
 
     }
 

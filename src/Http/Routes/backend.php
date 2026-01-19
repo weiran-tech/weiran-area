@@ -3,16 +3,15 @@
 declare(strict_types = 1);
 
 use Illuminate\Routing\Router;
+use Weiran\Area\Http\Backend\AreaController;
 
-Route::group([
-    'namespace' => 'Weiran\Area\Http\Request\Backend',
-], function (Router $router) {
-    $router->any('/', 'ContentController@index')
+Route::group([], function (Router $router) {
+    $router->any('/', [AreaController::class, 'index'])
         ->name('weiran-area:backend.content.index');
-    $router->any('establish/{id?}', 'ContentController@establish')
+    $router->any('establish/{id?}', [AreaController::class, 'establish'])
         ->name('weiran-area:backend.content.establish');
-    $router->any('delete/{id?}', 'ContentController@delete')
+    $router->any('delete/{id?}', [AreaController::class, 'delete'])
         ->name('weiran-area:backend.content.delete');
-    $router->any('fix', 'ContentController@fix')
+    $router->any('fix', [AreaController::class, 'fix'])
         ->name('weiran-area:backend.content.fix');
 });

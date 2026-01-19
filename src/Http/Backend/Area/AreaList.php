@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Weiran\Area\Http\MgrPage;
+namespace Weiran\Area\Http\Backend\Area;
 
 use Closure;
 use Weiran\Area\Models\SysArea;
@@ -13,7 +13,7 @@ use Weiran\MgrPage\Classes\Grid\Filter;
 use Weiran\MgrPage\Classes\Grid\ListBase;
 use Weiran\MgrPage\Classes\Operations;
 
-class ListSysArea extends ListBase
+class AreaList extends ListBase
 {
     public string $title = '地区管理';
 
