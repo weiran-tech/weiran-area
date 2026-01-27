@@ -21,7 +21,7 @@ use Weiran\System\Http\Web\ApiV1\WebApiController;
 class AreaController extends WebApiController
 {
     #[OA\Get(
-        path: 'api/web/area/v1/area/code',
+        path: '/api/web/area/v1/area/code',
         summary: '地区代码',
         tags: ['Area'],
         responses: [
@@ -41,7 +41,7 @@ class AreaController extends WebApiController
     }
 
     #[OA\Get(
-        path: 'api/web/area/v1/area/country',
+        path: '/api/web/area/v1/area/country',
         summary: '国别',
         tags: ['Area'],
         responses: [
