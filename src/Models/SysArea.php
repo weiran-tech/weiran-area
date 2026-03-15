@@ -42,7 +42,6 @@ use Weiran\System\Classes\Traits\FilterTrait;
 class SysArea extends Model
 {
     use FilterTrait, LegacySerializeData;
-
     public const LEVEL_PROVINCE = 1;
     public const LEVEL_CITY     = 2;
     public const LEVEL_COUNTY   = 4;
