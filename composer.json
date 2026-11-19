@@ -1,29 +1,30 @@
 {
-	"name": "weiran/area",
-	"description": "An Area management.",
-	"license": "Apache-2.0",
-	"authors": [
-		{
-			"name": "Mark Zhao",
-			"email": "zhaody901@126.com"
-		}
-	],
-	"require": {
-		"php": "^8.2"
-	},
-	"autoload": {
-		"psr-4": {
-			"Weiran\\Area\\": "src/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Weiran\\Area\\Tests\\" : "tests/"
-		}
-	},
-	"config": {
-		"preferred-install": "dist",
-		"sort-packages": true
-	},
-	"minimum-stability": "dev"
+  "name": "weiran/area",
+  "description": "An Area management.",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Mark Zhao",
+      "email": "zhaody901@126.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Weiran\\Area\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Weiran\\Area\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "version": "1.0.2611191543-rc2"
 }
